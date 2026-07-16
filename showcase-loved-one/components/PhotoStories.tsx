@@ -19,7 +19,7 @@ export function PhotoStories() {
 
   return (
     <section id="memories" className="memories-section">
-      <div className="section-shell memories-intro"><Reveal><p className="section-kicker">20 CURATED PHOTO MOMENTS</p><h2>Every photograph<br />holds a whole world.</h2></Reveal><Reveal><p className="section-intro">This premium layout supports up to 20 customer photos, presented through varied editorial compositions instead of a repetitive gallery.</p></Reveal></div>
+      <div className="section-shell memories-intro"><Reveal><p className="section-kicker">20 CURATED PHOTO MOMENTS</p><h2>Every photograph<br />holds a whole world.</h2></Reveal><Reveal><p className="section-intro">This premium layout supports up to 20 of your photos, presented through varied editorial compositions instead of a repetitive gallery.</p></Reveal></div>
 
       <Reveal className="feature-memory section-shell"><PhotoPlaceholder memory={featureOne} /><MemoryCopy memory={featureOne} number={1} /></Reveal>
 

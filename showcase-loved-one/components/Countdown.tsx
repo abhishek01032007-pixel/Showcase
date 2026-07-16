@@ -45,7 +45,7 @@ export function Countdown() {
           <div className="countdown-unit" key={label}><AnimatePresence mode="popLayout"><motion.strong key={value ?? `${label}-pending`} initial={{ opacity: 0, y: -12 }} animate={{ opacity: 1, y: 0 }} exit={{ opacity: 0, y: 12 }}>{value === null ? "--" : String(value).padStart(2, "0")}</motion.strong></AnimatePresence><span>{label}</span></div>
         ))}
       </div>
-      <p className="editable-note">Dates are sample content and can be changed for every customer.</p>
+      <p className="editable-note">Dates are sample content and can be changed for you.</p>
     </section>
   );
 }

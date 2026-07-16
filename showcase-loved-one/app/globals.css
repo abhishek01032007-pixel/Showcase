@@ -19,3 +19,43 @@
 @media(max-width:850px){.site-header nav{display:none}.hero-content h1{font-size:clamp(5rem,24vw,9rem)}.removed-soundtrack-position{right:5%;bottom:8%}.scroll-indicator{bottom:8%}.memories-intro,.video-heading{grid-template-columns:1fr}.split-memory{grid-template-columns:1fr;gap:30px}.split-memory.reverse .photo-placeholder{order:0}.polaroid-grid{grid-template-columns:1fr 1fr}.polaroid:nth-child(4),.polaroid:nth-child(5){grid-column:auto;width:auto;margin:0}.countdown-unit{height:150px}.timeline-list article{grid-template-columns:50px 1fr}.timeline-progress{left:20px}.timeline-list article>i,.timeline-list article:nth-child(even) i{grid-column:1;grid-row:1;width:38px}.timeline-date,.timeline-list article:nth-child(even) .timeline-date{grid-column:2;grid-row:1;text-align:left;padding:0 0 125px 12px}.timeline-card,.timeline-list article:nth-child(even) .timeline-card{grid-column:2;grid-row:1;margin:42px 0 0 12px}.feature-memory .photo-placeholder{min-height:600px}.final-photo-grid{grid-template-columns:1fr}.final-photo:last-child{grid-column:auto}}
 @media(max-width:600px){.site-header{top:10px;height:52px}.section-shell{width:min(92%,1180px)}.hero-section{padding-inline:4%}.hero-kicker{letter-spacing:.2em;font-size:.56rem}.hero-content h1{margin:50px 0 38px}.hero-subtitle{font-size:.84rem}.removed-soundtrack-control>span:nth-child(2),.equalizer{display:none}.removed-soundtrack-control{padding-right:8px}.scroll-indicator span{display:none}.letter-section{padding:95px 0}.letter-card{padding:55px 24px;border-radius:25px}.typewriter-letter{clip-path:none;animation:none}.memories-intro{margin-bottom:50px}.memories-intro h2,.timeline-heading h2,.video-heading h2,.countdown-section h2,.surprise-section h2{font-size:3.3rem}.feature-memory{margin-bottom:90px}.feature-memory .photo-placeholder{min-height:510px}.feature-memory>.memory-copy{left:14px;bottom:14px;width:calc(100% - 28px);padding:20px}.split-stories{gap:80px;margin-bottom:90px}.split-memory .photo-placeholder{min-height:430px}.split-memory .memory-copy{padding:8px}.polaroid-stage,.masonry-stage{padding:90px 0}.polaroid-grid{grid-template-columns:1fr}.masonry-grid{columns:1}.parallax-memory{height:75vh;min-height:580px;margin-bottom:80px}.floating-stage{height:870px}.floating-memory--1{left:0}.floating-memory--2{right:0;top:420px}.final-photo-grid{padding-bottom:90px}.timeline-section,.video-section,.countdown-section{padding:95px 0}.video-heading{gap:20px}.featured-video{height:500px}.video-thumbnails{grid-template-columns:1fr}.video-thumbnails button>div{height:95px}.countdown-tabs{flex-wrap:wrap}.countdown-grid{grid-template-columns:1fr 1fr}.countdown-unit{height:130px}.surprise-section{padding:90px 0 120px}.surprise-modal{padding-block:55px}.ending-section h2{font-size:19vw}footer{flex-direction:column;justify-content:center;gap:7px}.photo-placeholder--compact{min-height:250px}}
 @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*,*:before,*:after{animation-duration:.01ms!important;animation-iteration-count:1!important;scroll-behavior:auto!important}.typewriter-letter{clip-path:none}}
+
+/* ==========================================================================
+   PURE CSS VFX (Magic Ambient Dust / Sparks) - No HTML required
+   ========================================================================== */
+body::after {
+  content: "";
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 2px;
+  height: 2px;
+  border-radius: 50%;
+  pointer-events: none;
+  z-index: 9999;
+  /* Generate 15 floating particles using multiple box-shadows */
+  box-shadow: 
+    15vw 25vh 1.5px rgba(239, 160, 189, 0.6),
+    35vw 45vh 1px rgba(255, 255, 255, 0.5),
+    85vw 15vh 2px rgba(240, 208, 147, 0.7),
+    45vw 85vh 1.5px rgba(239, 160, 189, 0.4),
+    90vw 60vh 1px rgba(255, 255, 255, 0.5),
+    25vw 90vh 1px rgba(240, 208, 147, 0.4),
+    65vw 35vh 2px rgba(239, 160, 189, 0.7),
+    75vw 80vh 1.5px rgba(255, 255, 255, 0.6),
+    10vw 70vh 1px rgba(240, 208, 147, 0.5),
+    50vw 10vh 2px rgba(239, 160, 189, 0.8),
+    80vw 40vh 1.5px rgba(255, 255, 255, 0.5),
+    5vw 50vh 1px rgba(240, 208, 147, 0.6),
+    55vw 60vh 2px rgba(239, 160, 189, 0.4),
+    30vw 15vh 1px rgba(255, 255, 255, 0.7),
+    95vw 90vh 1.5px rgba(240, 208, 147, 0.5);
+  animation: magic-dust-float 40s linear infinite alternate;
+}
+
+@keyframes magic-dust-float {
+  0% { transform: translate(0, 0) scale(1); opacity: 0.6; }
+  33% { transform: translate(-3vw, -8vh) scale(1.2); opacity: 1; }
+  66% { transform: translate(4vw, -12vh) scale(0.9); opacity: 0.5; }
+  100% { transform: translate(-2vw, -18vh) scale(1.1); opacity: 0.8; }
+}
