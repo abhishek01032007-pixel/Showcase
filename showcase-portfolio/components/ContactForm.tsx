@@ -36,7 +36,7 @@ export function ContactForm() {
       <div className="field-row"><label><span>Your name</span><input name="name" autoComplete="name" placeholder="How should I address you?" required /></label><label><span>Email address</span><input type="email" name="email" autoComplete="email" placeholder="you@company.com" required /></label></div>
       <label><span>What can we create together?</span><select name="project" defaultValue=""><option value="" disabled>Select a project type</option><option>Product design</option><option>Website design & development</option><option>Brand identity</option><option>Something else</option></select></label>
       <label><span>Tell me about the opportunity</span><textarea name="message" rows={5} placeholder="A little context, your goals and your ideal timeline…" required minLength={20} /></label>
-      <div className="form-footer"><button type="submit" disabled={status === "sending"}>{status === "sending" ? "Sending…" : "Send project enquiry"}<span>↗</span></button><p aria-live="polite">{status === "success" && "Thanks—this demo enquiry is ready to be connected to the customer’s inbox."}{status === "error" && "Something went wrong. Please try the email link instead."}</p></div>
+      <div className="form-footer"><button type="submit" disabled={status === "sending"}>{status === "sending" ? "Sending…" : "Send project enquiry"}<span>↗</span></button><p aria-live="polite">{status === "success" && "Thanks—this demo enquiry is ready to be connected to your inbox."}{status === "error" && "Something went wrong. Please try the email link instead."}</p></div>
     </form>
   );
 }

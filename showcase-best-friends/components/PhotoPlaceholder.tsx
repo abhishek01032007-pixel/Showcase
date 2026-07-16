@@ -2,7 +2,7 @@ export function PhotoPlaceholder({ label, compact = false }: { label: string; co
   return (
     <div className={`photo-placeholder ${compact ? "photo-placeholder--compact" : ""}`}>
       <span>{label}</span>
-      <small>Replace with customer photo</small>
+      <small>Replace with your photo</small>
     </div>
   );
 }

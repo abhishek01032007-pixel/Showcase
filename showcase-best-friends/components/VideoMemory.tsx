@@ -6,7 +6,7 @@ export function VideoMemory() {
       <Reveal className="video-copy">
         <p>VIDEO MEMORY</p>
         <h2>The moment that deserves motion.</h2>
-        <span>Replace this placeholder with the customer video. If the video has sound, it plays through the video player.</span>
+        <span>Replace this placeholder with your video. If the video has sound, it plays through the video player.</span>
       </Reveal>
       <Reveal className="video-card">
         <div className="play-button">PLAY</div>
