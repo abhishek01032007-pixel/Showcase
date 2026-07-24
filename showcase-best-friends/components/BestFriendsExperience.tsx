@@ -4,6 +4,7 @@ import { motion, useScroll, useTransform } from "framer-motion";
 import { useEffect, useState } from "react";
 import { besties, bucketList, jokes, memories, profiles, timeline } from "@/data/content";
 import { Countdown } from "./Countdown";
+import { DriftingMemories } from "./DriftingMemories";
 import { PhotoPlaceholder } from "./PhotoPlaceholder";
 import { Reveal } from "./Reveal";
 import { Surprise } from "./Surprise";
@@ -93,26 +94,7 @@ export function BestFriendsExperience() {
                 </Reveal>
               ))}
             </div>
-            <div className="polaroid-grid">
-              {memories.slice(5, 11).map((memory) => (
-                <Reveal className="polaroid memory-card" key={memory.id}>
-                  <PhotoPlaceholder label={`Photo ${memory.id}`} compact />
-                  <span>{memory.date}</span>
-                  <h3>{memory.title}</h3>
-                  <p>{memory.description}</p>
-                </Reveal>
-              ))}
-            </div>
-            <div className="masonry-grid">
-              {memories.slice(11).map((memory) => (
-                <Reveal className="masonry-card memory-card" key={memory.id}>
-                  <PhotoPlaceholder label={`Photo ${memory.id}`} compact />
-                  <span>{memory.date}</span>
-                  <h3>{memory.title}</h3>
-                  <p>{memory.description}</p>
-                </Reveal>
-              ))}
-            </div>
+            <DriftingMemories />
           </div>
         </section>
 
@@ -184,6 +166,7 @@ export function BestFriendsExperience() {
             <p>FOREVER THE FAVORITE CHAPTER</p>
             <h2>Not just friends.<br />Family by choice.</h2>
             <a href="#home">Replay memories</a>
+            <a style={{ marginLeft: 12 }} href="https://memorlume.vercel.app/" target="_blank" rel="noreferrer">Create a story like this</a>
           </Reveal>
         </section>
       </main>

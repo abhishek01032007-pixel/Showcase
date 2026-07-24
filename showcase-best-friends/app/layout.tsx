@@ -1,6 +1,7 @@
 import type { Metadata, Viewport } from "next";
 import { Archivo_Black, Space_Grotesk } from "next/font/google";
 import "./globals.css";
+import "./drifting-memories.css";
 
 const display = Archivo_Black({ subsets: ["latin"], variable: "--font-display", weight: "400", display: "swap" });
 const sans = Space_Grotesk({ subsets: ["latin"], variable: "--font-sans", display: "swap" });

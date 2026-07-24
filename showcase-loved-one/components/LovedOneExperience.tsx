@@ -39,7 +39,7 @@ export function LovedOneExperience() {
         <Countdown />
         <Surprise />
 
-        <section className="ending-section"><div className="aurora aurora--ending"/><div className="stars" aria-hidden="true">{hearts.slice(0, 9).map((heart) => <i key={heart.id} style={{ left: `${heart.left}%`, animationDelay: `${heart.delay}s` }}>✦</i>)}</div><Reveal><p>AND IN EVERY UNIVERSE</p><h2>Forever & Always <span>❤️</span></h2><p className="ending-copy">The best part of our story is that it is still being written.</p><a href="#home">Experience it again ↑</a></Reveal></section>
+        <section className="ending-section"><div className="aurora aurora--ending"/><div className="stars" aria-hidden="true">{hearts.slice(0, 9).map((heart) => <i key={heart.id} style={{ left: `${heart.left}%`, animationDelay: `${heart.delay}s` }}>✦</i>)}</div><Reveal><p>AND IN EVERY UNIVERSE</p><h2>Forever & Always <span>❤️</span></h2><p className="ending-copy">The best part of our story is that it is still being written.</p><a href="#home">Experience it again ↑</a><a style={{ marginLeft: 12 }} href="https://memorlume.vercel.app/" target="_blank" rel="noreferrer">Create a story like this</a></Reveal></section>
       </main>
       <footer><span>Premium Loved One Template</span><span>Designed by Pixel Memories</span></footer>
     </>

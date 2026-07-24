@@ -1,0 +1,33 @@
+/* Portfolio-wide UI/UX refresh */
+body{background:#11110f}
+.site-header{top:18px;left:50%;width:min(1180px,94%);height:70px;padding:0 16px 0 22px;transform:translateX(-50%);border:1px solid rgba(255,255,255,.13);border-radius:18px;background:rgba(17,17,15,.78);box-shadow:0 18px 60px rgba(0,0,0,.18);backdrop-filter:blur(22px)}
+.site-header .brand{display:flex;align-items:center;gap:8px}
+.site-header .brand span{padding:4px 6px;border:1px solid rgba(255,255,255,.2);border-radius:5px}
+.availability{background:rgba(217,255,79,.08);border-color:rgba(217,255,79,.35)}
+.home-hero{padding-top:124px;gap:24px}
+.hero-copy{padding:36px 0}
+.hero-copy h1{max-width:920px}
+.hero-identity{border-radius:24px;box-shadow:0 35px 100px rgba(30,54,180,.28)}
+.identity-orbit{backdrop-filter:blur(3px)}
+.primary-link,.form-footer button{border-radius:10px}
+.featured-card .project-visual,.work-card .project-visual{border-radius:20px}
+.featured-card:hover .project-visual,.work-card:hover .project-visual{transform:translateY(-7px) scale(.99);box-shadow:0 28px 70px rgba(17,17,15,.13)}
+.project-meta{padding:22px 6px}
+.home-about{border-radius:32px 32px 0 0}
+.stats-row>div{padding:20px;border:1px solid #30302d;border-radius:14px;background:#161614}
+.capability-row{transition:padding .25s,background .25s}
+.capability-row:hover{padding-inline:18px;background:#171715}
+.home-cta{min-height:72vh;margin:0 18px 18px;border-radius:28px;overflow:hidden}
+.page-hero{padding-top:155px}
+.filter-bar{top:98px;border-radius:14px;padding:12px;background:rgba(242,240,233,.92);box-shadow:0 14px 45px rgba(17,17,15,.08)}
+.filter-bar button{transition:background .2s,color .2s,transform .2s}.filter-bar button:hover{transform:translateY(-2px)}
+.case-panel{border-radius:22px 0 0 22px}
+.contact-form{border-radius:22px}
+.skills-cloud span{background:rgba(255,255,255,.02)}
+.portfolio-create-cta{position:relative;min-height:72vh;padding:100px max(5vw,calc((100vw - 1180px)/2));display:grid;grid-template-columns:1fr minmax(360px,1.2fr);align-items:end;gap:70px;overflow:hidden;background:var(--acid);color:var(--ink)}
+.portfolio-create-copy{position:relative;z-index:2}.portfolio-create-copy .eyebrow{color:#4b561e}.portfolio-create-copy h2{margin:18px 0 30px;font:650 clamp(4rem,8vw,9rem)/.84 var(--font-display);letter-spacing:-.075em}.portfolio-create-copy h2 em{color:var(--blue);font-style:normal}.portfolio-create-copy>p:last-child{max-width:590px;font-size:1rem;line-height:1.75}
+.portfolio-create-cta>a{position:relative;z-index:2;align-self:end;display:flex;align-items:center;justify-content:space-between;gap:40px;padding:24px 26px;border-radius:16px;background:var(--ink);color:white;text-decoration:none;font-size:.82rem;font-weight:800;transition:transform .25s,box-shadow .25s}.portfolio-create-cta>a:hover{transform:translateY(-6px);box-shadow:0 24px 55px rgba(17,17,15,.22)}.portfolio-create-cta>a b{display:grid;place-items:center;width:44px;height:44px;border-radius:50%;background:var(--blue);font-size:1.2rem}
+.portfolio-create-orbit{position:absolute;right:-8vw;top:-22vw;width:55vw;aspect-ratio:1;border:1px solid rgba(17,17,15,.2);border-radius:50%;display:grid;place-items:center}.portfolio-create-orbit:before,.portfolio-create-orbit:after{content:"";position:absolute;inset:16%;border:1px solid rgba(17,17,15,.18);border-radius:50%;transform:rotateX(67deg)}.portfolio-create-orbit:after{transform:rotateY(67deg)}.portfolio-create-orbit span{font:700 8vw var(--font-display);opacity:.08}
+.site-footer{min-height:110px;padding-inline:max(4%,calc((100vw - 1180px)/2));background:#0b0b0a}
+@media(max-width:900px){.site-header{top:8px;width:96%;border-radius:14px}.site-header nav{top:78px;border-radius:14px}.home-hero{padding-top:105px}.portfolio-create-cta{grid-template-columns:1fr;align-content:end;gap:45px}.portfolio-create-cta>a{max-width:540px}.home-cta{margin:0 10px 10px}.filter-bar{top:82px}.case-panel{border-radius:0}}
+@media(max-width:600px){.portfolio-create-cta{min-height:78vh;padding:85px 5% 55px}.portfolio-create-copy h2{font-size:15vw}.portfolio-create-cta>a{padding:18px}.hero-identity{border-radius:18px}.featured-card .project-visual,.work-card .project-visual{border-radius:14px}}

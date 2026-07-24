@@ -1,9 +1,11 @@
 import type { Metadata, Viewport } from "next";
 import { Manrope, Syne } from "next/font/google";
 import { CustomCursor } from "@/components/CustomCursor";
+import { CreatePortfolioCTA } from "@/components/CreatePortfolioCTA";
 import { Footer } from "@/components/Footer";
 import { SiteHeader } from "@/components/SiteHeader";
 import "./globals.css";
+import "./portfolio-refresh.css";
 
 const display = Syne({ subsets: ["latin"], variable: "--font-display", display: "swap" });
 const sans = Manrope({ subsets: ["latin"], variable: "--font-sans", display: "swap" });
@@ -31,6 +33,7 @@ export default function RootLayout({ children }: Readonly<{ children: React.Reac
         <CustomCursor />
         <SiteHeader />
         {children}
+        <CreatePortfolioCTA />
         <Footer />
       </body>
     </html>
