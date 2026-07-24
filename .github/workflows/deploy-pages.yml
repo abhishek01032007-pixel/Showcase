@@ -1,0 +1,83 @@
+name: Deploy showcase sites to GitHub Pages
+
+on:
+  push:
+    branches: ["main"]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+concurrency:
+  group: pages
+  cancel-in-progress: true
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v4
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+          cache-dependency-path: |
+            showcase-best-friends/package-lock.json
+            showcase-loved-one/package-lock.json
+            showcase-portfolio/package-lock.json
+
+      - name: Build Best Friends showcase
+        working-directory: showcase-best-friends
+        run: |
+          npm ci
+          npm run typecheck
+          npm run build
+
+      - name: Build Loved One showcase
+        working-directory: showcase-loved-one
+        run: |
+          npm ci
+          npm run typecheck
+          npm run build
+
+      - name: Build Portfolio showcase
+        working-directory: showcase-portfolio
+        run: |
+          npm ci
+          npm run typecheck
+          npm run build
+
+      - name: Assemble Pages artifact
+        run: |
+          mkdir -p pages
+          cp pages-index.html pages/index.html
+          cp -R showcase-best-friends/out pages/showcase-best-friends
+          cp -R showcase-loved-one/out pages/showcase-loved-one
+          cp -R showcase-portfolio/out pages/showcase-portfolio
+          touch pages/.nojekyll
+
+      - name: Configure GitHub Pages
+        uses: actions/configure-pages@v5
+        with:
+          enablement: true
+
+      - name: Upload Pages artifact
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: pages
+
+  deploy:
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    runs-on: ubuntu-latest
+    needs: build
+    steps:
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4
